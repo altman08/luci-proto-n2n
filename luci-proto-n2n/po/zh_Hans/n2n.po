@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: luci-proto-n2n\n"
+"PO-Revision-Date: 2026-10-10 00:00+0000\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "A nonzero IPv4 address is required."
+msgstr "必须填写非零的 IPv4 地址。"
+
+msgid "Allow routed traffic"
+msgstr "允许路由流量"
+
+msgid "Allow traffic from other hosts, such as LAN clients. Configure routes and firewall forwarding separately. Always enabled in DHCP mode."
+msgstr "允许来自其他主机（例如 LAN 客户端）的流量。路由和防火墙转发需要另外配置。DHCP 模式下始终启用。"
+
+msgid "An encryption key is required."
+msgstr "必须填写加密密钥。"
+
+msgid "At least one supernode is required."
+msgstr "至少需要填写一个超级节点。"
+
+msgid "Community"
+msgstr "社区名"
+
+msgid "Compression"
+msgstr "压缩方式"
+
+msgid "DHCP from the overlay network"
+msgstr "从虚拟网络获取 DHCP 地址"
+
+msgid "DHCP hostname"
+msgstr "DHCP 主机名"
+
+msgid "DHCP requires a DHCP server reachable through another N2N peer. Interface up means the local TAP is ready, not that a peer is reachable."
+msgstr "DHCP 需要能够通过其他 N2N 对等节点访问的 DHCP 服务器。接口已启动仅表示本地 TAP 已就绪，不代表对等节点可达。"
+
+msgid "Encrypt packet headers"
+msgstr "加密数据包头部"
+
+msgid "Encryption key"
+msgstr "加密密钥"
+
+msgid "Expecting a port number between 0 and 65535."
+msgstr "请输入 0 到 65535 之间的端口号。"
+
+msgid "Expecting an IPv4 address or hostname followed by :port."
+msgstr "请输入 IPv4 地址或主机名，后接 :端口号。"
+
+msgid "Forward multicast traffic"
+msgstr "转发组播流量"
+
+msgid "IPv4 address"
+msgstr "IPv4 地址"
+
+msgid "IPv4 address assignment"
+msgstr "IPv4 地址分配方式"
+
+msgid "IPv4 gateway"
+msgstr "IPv4 网关"
+
+msgid "IPv4 prefix length"
+msgstr "IPv4 前缀长度"
+
+msgid "Listens on loopback only. Zero selects an available port automatically; it does not disable the management socket."
+msgstr "仅监听回环地址。设为 0 时自动选择可用端口，并非禁用管理套接字。"
+
+msgid "Local UDP port"
+msgstr "本地 UDP 端口"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Management UDP port"
+msgstr "管理 UDP 端口"
+
+msgid "N2N VPN"
+msgstr "N2N VPN"
+
+msgid "None"
+msgstr "无"
+
+msgid "None (unencrypted)"
+msgstr "无（不加密）"
+
+msgid "One IPv4 address or hostname with port per entry, for example vpn.example.com:1234."
+msgstr "每项填写一个带端口的 IPv4 地址或主机名，例如 vpn.example.com:1234。"
+
+msgid "Optional fixed MAC address. Otherwise N2N generates a random address on each start."
+msgstr "可选的固定 MAC 地址。留空时 N2N 会在每次启动时生成随机地址。"
+
+msgid "Optional gateway inside the overlay. Leave empty for peer-to-peer or site-to-site use."
+msgstr "可选的虚拟网络内部网关。点对点或站点互联时可留空。"
+
+msgid "Optional uplink used to reach the supernodes. Do not select the N2N interface itself."
+msgstr "可选的底层出口接口，用于访问超级节点。请勿选择 N2N 接口自身。"
+
+msgid "Payload encryption"
+msgstr "数据加密方式"
+
+msgid "Static address"
+msgstr "静态地址"
+
+msgid "Supernodes"
+msgstr "超级节点"
+
+msgid "TAP MAC address"
+msgstr "TAP MAC 地址"
+
+msgid "TAP device name"
+msgstr "TAP 设备名称"
+
+msgid "TAP startup timeout (seconds)"
+msgstr "TAP 启动超时（秒）"
+
+msgid "The community must contain 1 to 15 bytes."
+msgstr "社区名长度必须为 1 到 15 字节。"
+
+msgid "The encryption key must differ from the community."
+msgstr "加密密钥不能与社区名相同。"
+
+msgid "The supernode must be configured for the community and header encryption."
+msgstr "超级节点必须配置对应的社区和头部加密。"
+
+msgid "The underlying interface cannot be this N2N interface."
+msgstr "底层出口接口不能是当前 N2N 接口自身。"
+
+msgid "This TAP device name is already used by another N2N interface."
+msgstr "此 TAP 设备名称已被其他 N2N 接口使用。"
+
+msgid "This management port is already used by another N2N interface."
+msgstr "此管理端口已被其他 N2N 接口使用。"
+
+msgid "Underlying interface"
+msgstr "底层出口接口"
+
+msgid "Use 1 to 15 letters, digits, underscores or hyphens. Set a shorter device name if the interface name is too long."
+msgstr "请使用 1 到 15 个字母、数字、下划线或连字符。接口名过长时，请设置更短的设备名称。"
+
+msgid "Use DNS servers advertised by peer"
+msgstr "使用对端通告的 DNS 服务器"
+
+msgid "Use the same key and cipher on all peers. The key must differ from the community."
+msgstr "所有对等节点须使用相同的密钥和加密算法。密钥不能与社区名相同。"
+
+msgid "Zero selects an available port automatically. Fixed ports must be unique across N2N instances."
+msgstr "设为 0 时自动选择可用端口。多个 N2N 实例的固定端口不能相同。"
