@@ -7,3 +7,10 @@
  include(CheckFunctionExists)
  SET(CMAKE_VERBOSE_MAKEFILE ON)
  
+@@ -154,4 +154,4 @@
+ if(N2N_OPTION_USE_OPENSSL)
+-#  target_link_libraries(n2n crypto)
+-  target_link_libraries(n2n ${OPENSSL_LIBRARIES})
++  # N2N uses cryptographic primitives, not the TLS protocol library.
++  target_link_libraries(n2n OpenSSL::Crypto)
+ endif(N2N_OPTION_USE_OPENSSL)

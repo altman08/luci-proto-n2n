@@ -722,6 +722,21 @@ class PackageDependenciesTest(unittest.TestCase):
         self.assertNotIn("+ip-tiny", dependencies)
         self.assertNotIn("+ip-full", dependencies)
 
+    def test_edge_openssl_links_only_crypto(self):
+        backend = ROOT / "net/n2n-edge"
+        makefile = (backend / "Makefile").read_text(encoding="utf-8")
+        self.assertIn("-DN2N_OPTION_USE_OPENSSL=ON", makefile)
+        self.assertIn("+libopenssl", makefile)
+        additions = "\n".join(
+            line[1:]
+            for patch in (backend / "patches").glob("*.patch")
+            for line in patch.read_text(encoding="utf-8").splitlines()
+            if line.startswith("+") and not line.startswith("+++")
+        )
+        self.assertIn("target_link_libraries(n2n OpenSSL::Crypto)", additions)
+        self.assertNotIn("${OPENSSL_LIBRARIES}", additions)
+        self.assertNotIn("OpenSSL::SSL", additions)
+
 
 class TranslationTest(unittest.TestCase):
     def test_simplified_chinese_covers_all_frontend_strings(self):
